@@ -1,0 +1,25 @@
+{% extends "base_welcome.html" %}
+<!---->
+
+{% block form %}
+
+<form id="welcome-main__form" method="post">
+	{% csrf_token %}
+	<!---->
+	<div class="input">{{form.username}}</div>
+	<div class="input">{{form.email}}</div>
+	<div class="input">{{form.password1}}</div>
+	<div class="input">{{form.password2}}</div>
+
+	<button id="welcome-button" type="submit" class="input">
+		Create account
+	</button>
+</form>
+<div id="messages-wrapper">
+	{% for field, errors in form.errors.items %} {% for error in errors %}
+	<p class="error-messages">{{error}}</p>
+	{% endfor %} {% endfor %}
+</div>
+
+<!---->
+{% endblock form %}

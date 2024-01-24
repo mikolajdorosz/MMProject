@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% load static %}
+<!---->
+{% block content %}
+
+<div id="add-face-main">
+	<div id="form-wrapper">
+		<div id="camera-description">
+			<div style="display: flex">
+				<p id="text1" class="camera-text">Add face from a file</p>
+				<p id="text2" class="camera-text">or...</p>
+			</div>
+			<p id="text3" class="camera-text">use the web camera</p>
+			<p id="text4" class="camera-text">to take picture of yourself.</p>
+		</div>
+		<form id="add-face-form" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<div class="input">{{form.name}}</div>
+			<div class="input">{{form.picture}}</div>
+			<button id="add-face-btn" type="submit" class="camera-btn">
+				Add face
+			</button>
+		</form>
+	</div>
+	<div id="camera-container">
+		<img id='camera-img' src="{% static "ui_images/camera.png" %} "
+		width='640' height='480' />
+		<div id="camera-btn-wrapper">
+			<button id="start" class="camera-btn">Start webcam</button>
+			<button id="take-picture" class="camera-btn">Take picture</button>
+			<button id="refresh" class="camera-btn">Refresh</button>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

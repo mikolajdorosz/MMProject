@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+.welcome-text {
+  font-family: "Open Sans", sans-serif;
+}
+
+.input > input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 0.5em;
+  font-family: "Roboto Mono", monospace;
+  background-color: white;
+}
+
+.login-input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 0.5em;
+  font-family: "Roboto Mono", monospace;
+  background-color: white;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Roboto Mono", monospace;
+}
+
+#nav {
+  height: 6em;
+  padding: 1em 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  background-color: #392467;
+  color: white;
+}
+#nav .nav-link {
+  text-decoration: none;
+  height: 100%;
+  padding: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  font-size: 1.2rem;
+}
+#nav .nav-link i {
+  margin-left: 0.5em;
+}
+#nav #logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+#welcome-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#welcome-main__description, #welcome-main__form-wrapper {
+  height: 100%;
+  padding: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#welcome-main__description {
+  width: 40%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background: url("../../static/ui_images/welcome-bg.png") center center/100%;
+  color: white;
+}
+#welcome-main__description #text1 {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2rem;
+}
+#welcome-main__description #text2 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 3.5rem;
+}
+#welcome-main__description #text3 {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+#welcome-main__description #text4 {
+  font-size: 1.2rem;
+}
+#welcome-main__description #text5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#welcome-main__form-wrapper {
+  width: 60%;
+  padding: 8em 14em;
+  justify-content: flex-start;
+}
+#welcome-main__form-wrapper #welcome-main__form-links {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: 600;
+  z-index: 1;
+}
+#welcome-main__form-wrapper #welcome-main__form-links #login,
+#welcome-main__form-wrapper #welcome-main__form-links #signup {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: black;
+}
+#welcome-main__form-wrapper #welcome-main__form {
+  width: 100%;
+  height: 80%;
+  padding: 2em 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#welcome-main__form-wrapper #welcome-main__form .input {
+  margin-top: 0.5em;
+  width: 100%;
+}
+#welcome-main__form-wrapper #welcome-main__form #welcome-button {
+  width: 100%;
+  margin-top: 1em;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 0.5em;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.2rem;
+  background-color: white;
+  background-color: #f8a401;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#welcome-main__form-wrapper #messages-wrapper {
+  width: 100%;
+  padding: 0.5em 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#welcome-main__form-wrapper #messages-wrapper .error-messages {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(240, 75, 75);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+#home-main {
+  height: calc(100vh - 6em);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#home-main .home-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: black;
+  font-size: 2rem;
+}
+#home-main #emotion-recognition {
+  grid-area: 1/1/2/3;
+  background: #170245;
+  color: white;
+}
+#home-main #face-recognition {
+  grid-area: 2/1/3/3;
+  background: white;
+}
+#home-main #add-face {
+  background: #f8a401;
+  color: white;
+}
+#home-main #known-faces {
+  background: #d68200;
+  color: white;
+}
+
+#known-faces-main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr 1fr 1fr;
+}
+#known-faces-main .face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#known-faces-main .face img.face-picture {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#known-faces-main .face .face-name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1em;
+  background-color: #f2f2f2;
+  color: black;
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: capitalize;
+}
+
+#add-face-main {
+  width: 100%;
+  height: calc(100vh - 6em);
+  padding: 4em 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#add-face-main #form-wrapper {
+  height: 100%;
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#add-face-main #form-wrapper #camera-description {
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+#add-face-main #form-wrapper #camera-description .camera-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 300;
+}
+#add-face-main #form-wrapper #camera-description #text1 {
+  margin-right: 0.5em;
+  text-transform: uppercase;
+  color: #392467;
+  font-weight: 700;
+  font-style: normal;
+}
+#add-face-main #form-wrapper #camera-description #text3 {
+  text-transform: uppercase;
+  color: #d68200;
+  font-weight: 700;
+  font-style: normal;
+}
+#add-face-main #form-wrapper #add-face-form {
+  height: 70%;
+  width: 100%;
+  padding: 2em 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #f2f2f2;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#add-face-main #form-wrapper #add-face-form ::-webkit-file-upload-button {
+  all: unset;
+  margin-right: 1em;
+  padding: 0.25em 1em;
+  border: 0;
+  border-radius: 0.5em;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  background-color: #392467;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#add-face-main #form-wrapper #add-face-form .input {
+  width: 100%;
+}
+#add-face-main #form-wrapper #add-face-form #add-face-btn {
+  background-color: #170245;
+}
+#add-face-main #camera-container {
+  height: 100%;
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#add-face-main #camera-container #camera-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5em;
+}
+#add-face-main #camera-container #take-picture,
+#add-face-main #camera-container #refresh {
+  display: none;
+}
+#add-face-main #camera-container #refresh {
+  margin-left: 1em;
+  background-color: #d68200;
+}
+#add-face-main #camera-container #camera-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.camera-btn {
+  all: unset;
+  margin-top: 1em;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 0.5em;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.2rem;
+  background-color: #f8a401;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

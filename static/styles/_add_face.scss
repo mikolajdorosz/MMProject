@@ -1,0 +1,110 @@
+#add-face-main {
+	width: 100%;
+	height: calc(100vh - $nav-height);
+	padding: 4em 6em;
+	@include flexCentered(row);
+	justify-content: space-between;
+
+	#form-wrapper {
+		height: 100%;
+		width: 48%;
+		@include flexCentered(column);
+		justify-content: space-between;
+
+		#camera-description {
+			padding: 3em 0;
+			@include flexCentered(column);
+			justify-content: space-evenly;
+			align-items: flex-start;
+
+			.camera-text {
+				font-family: $read-font;
+				font-size: 2rem;
+				font-style: italic;
+				font-weight: 300;
+			}
+			#text1 {
+				margin-right: 0.5em;
+				text-transform: uppercase;
+				color: $third-color;
+				font-weight: 700;
+				font-style: normal;
+			}
+			#text3 {
+				text-transform: uppercase;
+				color: $fourth-color-dark;
+				font-weight: 700;
+				font-style: normal;
+			}
+		}
+		#add-face-form {
+			height: 70%;
+			width: 100%;
+			padding: 2em 4em;
+			@include flexCentered(column);
+			justify-content: space-evenly;
+			background-color: $fifth-color;
+			box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+				rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+				rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+			::-webkit-file-upload-button {
+				all: unset;
+				margin-right: 1em;
+				padding: 0.25em 1em;
+				border: 0;
+				border-radius: 0.5em;
+				font-family: $ui-font;
+				font-size: 1rem;
+				background-color: $third-color;
+				color: $primary-color;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+			.input {
+				width: 100%;
+			}
+			#add-face-btn {
+				background-color: $third-color-dark;
+			}
+		}
+	}
+	#camera-container {
+		height: 100%;
+		width: 48%;
+		@include flexCentered(column);
+
+		#camera-img {
+			object-fit: cover;
+			border-radius: 0.5em;
+		}
+
+		#take-picture,
+		#refresh {
+			display: none;
+		}
+		#refresh {
+			margin-left: 1em;
+			background-color: $fourth-color-dark;
+		}
+
+		#camera-btn-wrapper {
+			width: 100%;
+			@include flexCentered(row);
+		}
+	}
+}
+
+.camera-btn {
+	all: unset;
+	margin-top: 1em;
+	padding: 1em 2em;
+	border: 0;
+	border-radius: 0.5em;
+	font-family: $ui-font;
+	font-size: 1.2rem;
+	background-color: $fourth-color;
+	color: $primary-color;
+	text-transform: uppercase;
+	cursor: pointer;
+}

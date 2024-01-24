@@ -1,0 +1,29 @@
+#known-faces-main {
+	height: 100%;
+	width: 100%;
+	//padding: 1em;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-auto-rows: 1fr 1fr 1fr 1fr;
+
+	.face {
+		@include flexCentered(column);
+		img.face-picture {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.face-name {
+			width: 100%;
+			@include flexCentered(row);
+			padding: 1em;
+			background-color: $fifth-color;
+			color: $secondary-color;
+			font-size: 1.3rem;
+			font-family: $read-font;
+			text-transform: capitalize;
+		}
+	}
+}

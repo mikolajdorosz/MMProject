@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+// Variables
+$primary-color: white;
+$secondary-color: black;
+$third-color: #392467;
+$third-color-dark: #170245;
+$fourth-color: #f8a401;
+$fourth-color-dark: #d68200;
+$fifth-color: #f2f2f2;
+
+$nav-height: 6em;
+$ui-font: "Roboto Mono", monospace;
+$read-font: "Open Sans", sans-serif;
+
+// Mixins
+@mixin flexCentered($flex-dir) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $flex-dir;
+}
+
+// Common classes
+.welcome-text {
+	font-family: $read-font;
+}
+
+.input > input {
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 1em 2em;
+	border: 0;
+	border-radius: 0.5em;
+	font-family: $ui-font;
+	background-color: $primary-color;
+}
+
+.login-input {
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 1em 2em;
+	border: 0;
+	border-radius: 0.5em;
+	font-family: $ui-font;
+	background-color: $primary-color;
+}
+
+// General
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-family: $ui-font;
+}
+
+@import "nav";
+@import "welcome";
+@import "home";
+@import "known_faces";
+@import "add_face";

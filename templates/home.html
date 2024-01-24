@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+<!---->
+{% block content %}
+
+<div id="home-main">
+	<a href="{% url "emotion_recognition" %}" id="emotion-recognition" class="home-link" >Emotion recognition</a>
+	<a href="{% url "face_recognition" %}" id="face-recognition" class="home-link" >Face recognition</a>
+	<a href="{% url "add_face" %}" id="add-face" class="home-link" >Add face</a>
+	<a href="{% url "known_faces" %}" id="known-faces" class="home-link" >Known faces</a>
+</div>
+
+{% endblock content %}

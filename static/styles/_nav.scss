@@ -1,0 +1,31 @@
+#nav {
+	height: $nav-height;
+	padding: 1em 6em;
+	@include flexCentered(row);
+	justify-content: flex-end;
+
+	position: relative;
+	background-color: $third-color;
+	color: $primary-color;
+
+	.nav-link {
+		text-decoration: none;
+		height: 100%;
+		padding: 0 1em;
+		@include flexCentered(row);
+		color: $primary-color;
+		font-size: 1.2rem;
+
+		i {
+			margin-left: 0.5em;
+		}
+	}
+	#logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		font-weight: 600;
+		font-size: 2rem;
+	}
+}

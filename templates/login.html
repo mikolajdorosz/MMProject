@@ -1,0 +1,36 @@
+{% extends "base_welcome.html" %}
+<!---->
+
+{% block form %}
+
+<form id="welcome-main__form" method="post">
+	{% csrf_token %}
+	<!---->
+	<div class="input">
+		<input
+			id="username-login"
+			type="text"
+			name="username"
+			class="login-input"
+			placeholder="Username"
+		/>
+	</div>
+	<div class="input">
+		<input
+			id="password-login"
+			type="password"
+			name="password"
+			class="login-input"
+			placeholder="Password"
+		/>
+	</div>
+	<button id="welcome-button" type="submit" class="input">Login</button>
+</form>
+<div id="messages-wrapper">
+	{% for message in messages %}
+	<p class="error-messages">{{message}}</p>
+	{% endfor %}
+</div>
+
+<!---->
+{% endblock form %}
